@@ -70,11 +70,11 @@ def evaluate_forecast(test_data, predictions):
 
     print(metrics_df)
 
-def arima_smoothed():
+def main():
     warnings.filterwarnings('ignore')
 
     file_path = 'BTC-USD.csv'
-    data = load_data(file_path)
+	 data = load_data(file_path)
     data = make_data_stationary(data)
 
     train_data, test_data = train_test_split_data(data)
@@ -82,3 +82,6 @@ def arima_smoothed():
     predictions = fit_arima_model(train_data)
 
     evaluate_forecast(test_data, predictions)
+
+if __name__ == "__main__":
+    main()

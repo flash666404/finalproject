@@ -97,7 +97,7 @@ def evaluate_model(test_df, predicted_price):
 
     print(metrics_df)
 
-if __name__ == "__main__":
+def main():
     file_path = 'BTC-USD.csv'
     df = load_data(file_path)
     x_train, y_train, test_df, scaler = preprocess_data(df)
@@ -106,3 +106,6 @@ if __name__ == "__main__":
     predicted_price = predict_price(model, test_df, scaler)
     plot_predictions(test_df, predicted_price)
     evaluate_model(test_df, predicted_price)
+
+if __name__ == "__main__":
+    main()

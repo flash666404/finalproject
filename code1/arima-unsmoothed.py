@@ -63,7 +63,7 @@ def evaluate_forecast(test_data, predictions):
 
     print(metrics_df)
 
-def main():
+def arima_unsmoothed():
     warnings.filterwarnings('ignore')
 
     file_path = 'BTC-USD.csv'
@@ -75,5 +75,3 @@ def main():
 
     evaluate_forecast(test_data, predictions)
 
-if __name__ == "__main__":
-    main()

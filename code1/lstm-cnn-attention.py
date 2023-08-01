@@ -68,7 +68,7 @@ def calculate_metrics(df_combined):
 
     return metrics_df
 
-if __name__ == "__main__":
+def main():
     # Load and preprocess data
     window = 5
     lstm_units = 16
@@ -102,3 +102,6 @@ if __name__ == "__main__":
     plot_predictions(df_combined)
     metrics_df = calculate_metrics(df_combined)
     print(metrics_df)
+
+if __name__ == "__main__":
+    main()
